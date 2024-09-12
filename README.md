@@ -1,12 +1,18 @@
 ## Welcome to my session for "Data quality with stakeholders and dbt
 
-### Data quality is like campfire. How do we get stakeholders to gather round?
+#### Data quality is like campfire 
+(Inspiration: Chad Sanderson & data quality camp)
+
+* Something is always on fire
+* The content always high-quality wood
+
 
 <img width="466" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
 
+* We want people to gather round > we need snacks
+
 <img width="466" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
-Inspiration: Chad Sanderson & data quality camp
 
 
 
