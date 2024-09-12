@@ -1,9 +1,10 @@
 ## Welcome to my session for "Data quality with stakeholders and dbt
 
-### Data quality is like campfire
+### Data quality is like campfire. How do we get stakeholders to gather round?
 
 <img width="266" alt="campfire" src="https://gist.github.com/user-attachments/assets/717bed62-3086-4b79-8cd1-30cbf0727be2">
 
+<img width="266" alt="campfire" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
 <img width="266" alt="cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401](https://gist.github.com/user-attachments/assets/5d92087a-e88d-4ce9-b9bc-49918dee6030">
 
