@@ -2,9 +2,10 @@
 
 ### Data quality is like campfire
 
-![EF20090804_049-cmyk-copy](https://gist.github.com/user-attachments/assets/717bed62-3086-4b79-8cd1-30cbf0727be2)
+<img width="266" alt="campfire" src="https://gist.github.com/user-attachments/assets/717bed62-3086-4b79-8cd1-30cbf0727be2">
 
-![cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401](https://gist.github.com/user-attachments/assets/5d92087a-e88d-4ce9-b9bc-49918dee6030)
+
+<img width="266" alt="cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401](https://gist.github.com/user-attachments/assets/5d92087a-e88d-4ce9-b9bc-49918dee6030">
 
 Inspiration: Chad Sanderson & data quality camp
 
