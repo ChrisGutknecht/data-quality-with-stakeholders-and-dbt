@@ -2,11 +2,9 @@
 
 ### Data quality is like campfire. How do we get stakeholders to gather round?
 
-<img width="266" alt="campfire" src="https://gist.github.com/user-attachments/assets/717bed62-3086-4b79-8cd1-30cbf0727be2">
+<img width="466" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
 
-<img width="266" alt="campfire" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
-
-<img width="266" alt="cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401](https://gist.github.com/user-attachments/assets/5d92087a-e88d-4ce9-b9bc-49918dee6030">
+<img width="466" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
 Inspiration: Chad Sanderson & data quality camp
 
