@@ -3,27 +3,26 @@
 ### 1. INTRO. Data quality is like a campfire (Inspiration: Chad Sanderson)
 
 ---
-* We want people to gather around and spend time on data quality... but how?
- 
-<img width="650" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
+* We want people to stay and spend time on data quality... but how?
 
-Data team level
+(remove before publish: Data team level
 * Beginners. "Where do we look for material?"
 * Intermediates. "Something's always on fire! This material is sh...! "
-* Experts. "Everything's under control. We have friends helping us"
+* Experts. "Everything's under control. We have friends helping us")
+ 
+<img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
 
----
 * How do people gather round the fire? Marshmallows!
 
-<img width="650" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
-(Marshmallows = data events stakeholders care about)
+<img width="550" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
----
-
+* Marshmallows = data events stakeholders care about)
 * But... we need to mix snacks with healthy food!
+* Healthy food = Boring tests like `unique` and `not_null`
 
-<img width="350" alt="healthy-snacks" src="https://cdn-abeco.nitrocdn.com/vMCLEGbZccgRIgpGXvgkDDYcPokgENUq/assets/images/optimized/rev-bdb3a91/gatheringdreams.com/wp-content/uploads/2023/05/camping-snacks-main.jpg">
-(Healthy food = Boring tests like `unique` and `not_null`)
+<img width="250" alt="healthy-snacks" src="https://cdn-abeco.nitrocdn.com/vMCLEGbZccgRIgpGXvgkDDYcPokgENUq/assets/images/optimized/rev-9f829d3/gatheringdreams.com/wp-content/uploads/2023/05/camping-snacks-main.jpg">
+
+
 
 
 ## 2. POLL. Let's have a Live poll with Menti! 
@@ -31,6 +30,12 @@ Data team level
 Link: https://www.menti.com/alxmw7icd8ks
 Code: 4553 5553
 
+<img width="350" alt="poll" src="https://vscteam.de/wp-content/uploads/2021/03/Mentimeter-Logo.png">
+
+
+---
+
+## 2. POLL. Let's have a Live poll with Menti! 
 
 Ysession on "Collaborating on Data Quality in an E-commerce Company," you can creatively utilize the "No Slides" format by incorporating a range of dynamic, interactive content and tools that will actively engage your audience. Here are different methods to show content in a session slot for your topic:
 
