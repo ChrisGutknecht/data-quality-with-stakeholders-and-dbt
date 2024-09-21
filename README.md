@@ -5,12 +5,15 @@
 ---
 * We want people to stay and spend time on data quality... but how?
 
-(remove before publish: Data team level
+ 
+<img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
+
+```
+remove before publish: Data team level
 * Beginners. "Where do we look for material?"
 * Intermediates. "Something's always on fire! This material is sh...! "
 * Experts. "Everything's under control. We have friends helping us")
- 
-<img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
+```
 
 * How do people gather round the fire? Marshmallows!
 
@@ -22,12 +25,13 @@
 
 ---
 
-## 2. POLL. Let's have a Live poll to get know YOU!
+
+## 2. POLL. Let's have a Live poll to get know you!
 
 Link: https://www.menti.com/alxmw7icd8ks
 Code: 4553 5553
 
-<img width="350" alt="poll" src="https://vscteam.de/wp-content/uploads/2021/03/Mentimeter-Logo.png">
+<img width="250" alt="poll" src="https://vscteam.de/wp-content/uploads/2021/03/Mentimeter-Logo.png">
 
 
 ---
@@ -58,16 +62,31 @@ This is how ChatGPT visualizes the process: :-D
 
 ---
 
+Live alerts demo links:
+- logs sink. https://console.cloud.google.com/logs/router/sink/projects%2Fbergzeit%2Fsinks%2Fdbt_test_results_update?project=bergzeit
+- Brand name changes: https://teams.microsoft.com/l/message/19:1e2264e4c6744f54afdde51365aea367@thread.tacv2/1718783109390?tenantId=56c3a46a-d8d8-4536-b7df-55171d42be45&groupId=1f3a7ce9-a98e-44a5-92b4-92411119424c&parentMessageId=1718783109390&teamName=Data%20%26%20Analytics&channelName=Alerts_dbt_channelpilot&createdTime=1718783109390&ngc=true
+
 ### How we resolve data tests with our stakeholders
 
 
 * Use dbt Explore to demonstrate how to debug data tests
-* run the compiled query in BigQuery to find out the source
+  - Open the affected model in dbt Explore, click on the failed test.
+  - Copy the compiled test code into BigQuery and run the query:
+
 * Looker Studio Dashboards for Data Visualization
+* Rotate first response duty among data team
+  - Are certain days or values noticeable? If yes, include them in the comment, along with the query.
+  - If the test is only true or false, the model owner should take over.
+ 
+* Is this the first time the fail occurred? Is there reason to believe it won't occur again and is an exception? > Wait to see if the fail occurs again.
+* Is the threshold too strict? Is increasing it justifiable? > Increase the threshold.
+* Unique? Would a deduplication using a qualify row_number() statement make sense? > Deduplicate.
+* Is the alert even meaningful? Is there an adequate response, or is there nothing to be done? > Remove the alert and report the issue to the business owner.
 
 ---
 
 ### Best practices for improving data tests
+
 
 * Route different tests into differente channels (Teams, Slack) using
 
@@ -102,5 +121,14 @@ channel_attribution:
   +group: customer_acquisition
 ```
 
-* constantly update the model description to give context, describe worst case Scenarios of test failues und specific resolution tests
+* constantly update model description to 1) provide more context, 2) describe worst case Scenarios of test failures und 3) specific resolution tests
+
+* improve signal-to-noise ratio 
+
+
+* How can I optimize the UX test alerts resolution?
+
+# Resources: 
+- dbt expectations: https://github.com/calogica/dbt-expectations
+
 
