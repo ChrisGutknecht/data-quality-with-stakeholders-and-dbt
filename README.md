@@ -16,16 +16,13 @@
 
 <img width="550" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
-* Marshmallows = data events stakeholders care about)
-* But... we need to mix snacks with healthy food!
+* **Marshmallows** = data events stakeholders care about)
+* But... we need to mix snacks with **healthy food**!
 * Healthy food = Boring tests like `unique` and `not_null`
 
-<img width="250" alt="healthy-snacks" src="https://cdn-abeco.nitrocdn.com/vMCLEGbZccgRIgpGXvgkDDYcPokgENUq/assets/images/optimized/rev-9f829d3/gatheringdreams.com/wp-content/uploads/2023/05/camping-snacks-main.jpg">
+---
 
-
-
-
-## 2. POLL. Let's have a Live poll with Menti! 
+## 2. POLL. Let's have a Live poll to get know YOU!
 
 Link: https://www.menti.com/alxmw7icd8ks
 Code: 4553 5553
@@ -35,39 +32,75 @@ Code: 4553 5553
 
 ---
 
-## 2. POLL. Let's have a Live poll with Menti! 
+## 3. DEMO. Let's dive into some real examples!
 
-Ysession on "Collaborating on Data Quality in an E-commerce Company," you can creatively utilize the "No Slides" format by incorporating a range of dynamic, interactive content and tools that will actively engage your audience. Here are different methods to show content in a session slot for your topic:
+### Our data quality alert pipeline 
+* **dbt cloud** to manage models and run tests
+* Store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
+* Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
+* A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
 
-1. GitHub Repository for Code Collaboration
-Method: Begin the session by sharing a GitHub repository URL containing code examples for data quality checks, scripts, and workflows. Use GitHub's README files to provide context and explanations.
-Interactive Element: Encourage participants to fork the repo, explore the code, and suggest improvements or modifications in real-time using GitHub Issues or Pull Requests. You can also showcase live collaboration through code pair programming with volunteers from the audience.
-2. Live Example of Team Discussions
-Method: Simulate or reenact real-life scenarios where different teams (such as Data Analysts, Engineers, Product Managers, etc.) discuss data quality issues.
-Interactive Element: Use a tool like Slack, Microsoft Teams, or Discord to demonstrate how teams handle data quality alerts. Consider inviting participants to join a live chat channel during the session to replicate a discussion environment or use a role-playing method to engage volunteers from the audience.
-3. DBT Test Configurations in dbt Explore
-Method: Share your screen and navigate through dbt Cloud or dbt Core to showcase different test configurations. Use dbt Explore to demonstrate how to set up and customize data tests to suit specific e-commerce data quality needs.
-Interactive Element: Perform a live walkthrough of configuring data quality tests, followed by executing them and analyzing the results. Ask the audience to suggest tests based on real-world scenarios, then configure and run them on the spot to illustrate the process.
-4. Looker Studio Dashboards for Data Visualization
-Method: Open Looker Studio (formerly Data Studio) to display dashboards that visualize data quality metrics and monitored data. Showcase how you use these dashboards to identify trends, outliers, or data quality issues.
-Interactive Element: Walk the audience through the creation of a dashboard from scratch or make modifications to an existing dashboard based on audience suggestions. Demonstrate how to set up alerts or scheduled reports to monitor data quality continuously.
-5. Live Q&A and Problem-Solving
-Method: Incorporate Q&A segments throughout your session to address questions as they arise, rather than waiting until the end. Encourage the audience to pose challenges or specific scenarios related to data quality.
-Interactive Element: Solve these problems live, using your tools (GitHub, dbt, Looker Studio) to demonstrate practical solutions in real-time.
-6. Interactive Polls and Surveys
-Method: Use tools like Mentimeter, Slido, or Google Forms to conduct live polls or surveys. For example, ask the audience about their current data quality practices or challenges they face.
-Interactive Element: Display results in real-time, and adapt your session content based on audience responses to make the discussion more relevant and engaging.
-7. Use Real-Time Data Feeds
-Method: Show a live data feed that reflects actual changes or issues in data quality. This could be done by connecting to a database or data warehouse that updates frequently.
-Interactive Element: Challenge the audience to identify and diagnose data quality issues based on the live feed. Walk through the steps needed to address these issues using the tools at your disposal.
-8. Interactive Workflow Diagrams and Whiteboarding
-Method: Use an online whiteboarding tool like Miro or Mural to map out data quality workflows, processes, or data lineage diagrams collaboratively.
-Interactive Element: Invite the audience to contribute to the whiteboard, adding their own ideas, solutions, or feedback in real-time.
-9. Demonstrate Alerts Setup and Notification Management
-Method: Showcase how to set up data quality alerts using tools like Slack, PagerDuty, or email notifications that trigger based on dbt test failures.
-Interactive Element: Set up a live alert system and simulate a dbt test failure to show how alerts propagate and how teams should respond. You could even prompt the audience to send test alerts to their own devices.
-10. Run a Mini-Workshop
-Method: Dedicate a portion of the session to hands-on exercises. Provide datasets and ask participants to run their data quality checks or set up a test using the provided tools.
-Interactive Element: Offer guidance, answer questions, and provide immediate feedback. This encourages active participation and deepens understanding.
-By leveraging these methods, you can create a highly engaging, interactive session that aligns with the "No Slides" philosophy of the conference while providing valuable insights and practical skills to your audience.
+This is how ChatGPT visualizes the process: 
+
+<img width="350" alt="poll" src="https://gist.github.com/user-attachments/assets/196817d4-cce7-4147-a373-c216fa86cda6">
+
+---
+
+### Types of heavily uses data tests
+
+
+| #   | Test type         | Example use cases       | Stakeholder interaction |
+|-----|-------------------|-------------------------|--------------------------|
+| 1   | live alerts       | 404 errors              | High                     |
+| 2   | volume changes    | Googlebot crawl volume  | Medium                   |
+| 3   | date completeness | Missing dates           | Low                      |
+| 4   | dbt generic tests | not_null, unique        | None                     |
+
+---
+
+### How we resolve data tests with our stakeholders
+
+
+* Use dbt Explore to demonstrate how to debug data tests
+* run the compiled query in BigQuery to find out the source
+* Looker Studio Dashboards for Data Visualization
+
+---
+
+### Best practices for improving data tests
+
+* Route different tests into differente channels (Teams, Slack) using
+
+```
+  - dbt_expectations.expect_table_row_count_to_be_between:
+      # The three cloud schedulder jobs for DACH query 350 URLs each, thus a total min amount is expected
+      min_value: 900
+      row_condition: "date = current_date()" # (Optional)
+      strictly: false
+      config:
+        severity: warn
+        tags: ["analytics-alerts"]
+```
+
+* use owner tags on all models
+
+```
+  - name: stg_gsc_inspection_logs
+    description: >
+      This model lists the search console inspection logs for a list daily tested URLs. 
+      See source description for more details
+    meta:
+      owner: "@Chris G"
+```
+* use group tags for all folders as fallback for model ownership
+
+```
+census_syncs:
+  +group: data_team
+
+channel_attribution:
+  +group: customer_acquisition
+```
+
+* constantly update the model description to give context, describe worst case Scenarios of test failues und specific resolution tests
 
