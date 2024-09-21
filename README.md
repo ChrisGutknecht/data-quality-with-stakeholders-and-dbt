@@ -42,7 +42,7 @@ Code: 4553 5553
 
 This is how ChatGPT visualizes the process: :-D
 
-<img width="350" alt="poll" src="ezgif-5-0ce8707edf.png">
+<img width="350" alt="poll" src="cloud_components_chatgpt.png">
 
 ---
 
