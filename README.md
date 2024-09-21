@@ -40,21 +40,21 @@ Code: 4553 5553
 * Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
 * A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
 
-This is how ChatGPT visualizes the process: 
+This is how ChatGPT visualizes the process: :-D
 
-<img width="350" alt="poll" src="https://gist.github.com/user-attachments/assets/196817d4-cce7-4147-a373-c216fa86cda6">
+<img width="350" alt="poll" src="ezgif-5-0ce8707edf.png">
 
 ---
 
 ### Types of heavily uses data tests
 
 
-| #   | Test type         | Example use cases       | Stakeholder interaction |
+| #   | Test type         | Example use cases       | Stakeholder interaction  |
 |-----|-------------------|-------------------------|--------------------------|
-| 1   | live alerts       | 404 errors              | High                     |
-| 2   | volume changes    | Googlebot crawl volume  | Medium                   |
-| 3   | date completeness | Missing dates           | Low                      |
-| 4   | dbt generic tests | not_null, unique        | None                     |
+| 1   | Live alerts       | 404 errors              | High                     |
+| 2   | Volume changes    | Googlebot crawl volume  | Medium                   |
+| 3   | Date completeness | Missing dates           | Low                      |
+| 4   | Dbt generic tests | not_null, unique        | None                     |
 
 ---
 
