@@ -1,9 +1,12 @@
 ## Welcome to my No-Slides session for "Data quality with stakeholders"
 
-### 1. INTRO. Data quality is like a campfire (Inspiration: Chad Sanderson)
+<img width="250" alt="noslides" src="https://noslides.wtf/_app/immutable/assets/hero-desktop.DMAxQ2GM.webp">
 
 ---
-* We want people to stay and spend time on data quality... but how?
+### 1. INTRO. Data quality is like a campfire :fire:
+
+---
+* We want people to stay and spend time on data quality... but HOW?
 
  
 <img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
@@ -15,13 +18,13 @@ remove before publish: Data team level
 * Experts. "Everything's under control. We have friends helping us")
 ```
 
-* How do people gather round the fire? Marshmallows!
+* How do people gather round a campfire? Marshmallows!
 
 <img width="550" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
-* **Marshmallows** = data events stakeholders care about)
-* But... we need to mix snacks with **healthy food**!
-* Healthy food = Boring tests like `unique` and `not_null`
+* **Marshmallows** are data events stakeholders care about:
+   * **Anomalies** = things they don't have to monitor
+* BUT we need to mix in **healthy snacks** = boring tests like `unique` and `not_null`
 
 ---
 
@@ -65,6 +68,8 @@ This is how ChatGPT visualizes the process: :-D
 Live alerts demo links:
 - logs sink. https://console.cloud.google.com/logs/router/sink/projects%2Fbergzeit%2Fsinks%2Fdbt_test_results_update?project=bergzeit
 - Brand name changes: https://teams.microsoft.com/l/message/19:1e2264e4c6744f54afdde51365aea367@thread.tacv2/1718783109390?tenantId=56c3a46a-d8d8-4536-b7df-55171d42be45&groupId=1f3a7ce9-a98e-44a5-92b4-92411119424c&parentMessageId=1718783109390&teamName=Data%20%26%20Analytics&channelName=Alerts_dbt_channelpilot&createdTime=1718783109390&ngc=true
+
+---
 
 ### How we resolve data tests with our stakeholders
 
