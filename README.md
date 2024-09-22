@@ -41,19 +41,8 @@ Code: 4553 5553
 
 ## 3. DEMO. Let's dive into some real examples!
 
-### Our data quality alert pipeline 
-* **dbt cloud** to manage models and run tests
-* Store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
-* Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
-* A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
 
-This is how ChatGPT visualizes the process: :-D
-
-<img width="350" alt="poll" src="cloud_components_chatgpt.png">
-
----
-
-### Types of heavily uses data tests
+### Types of heavily used data tests
 
 
 | #   | Test type         | Example use cases       | Stakeholder interaction  |
@@ -61,7 +50,7 @@ This is how ChatGPT visualizes the process: :-D
 | 1   | Live alerts       | 404 errors              | High                     |
 | 2   | Volume changes    | Googlebot crawl volume  | Medium                   |
 | 3   | Date completeness | Missing dates           | Low                      |
-| 4   | Dbt generic tests | not_null, unique        | None                     |
+| 4   | dbt generic tests | not_null, unique        | None                     |
 
 ---
 
@@ -70,6 +59,16 @@ Live alerts demo links:
 - Brand name changes: https://teams.microsoft.com/l/message/19:1e2264e4c6744f54afdde51365aea367@thread.tacv2/1718783109390?tenantId=56c3a46a-d8d8-4536-b7df-55171d42be45&groupId=1f3a7ce9-a98e-44a5-92b4-92411119424c&parentMessageId=1718783109390&teamName=Data%20%26%20Analytics&channelName=Alerts_dbt_channelpilot&createdTime=1718783109390&ngc=true
 
 ---
+
+### Our daily data quality alert pipeline 
+* **dbt cloud** to manage models and run tests
+* Store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
+* Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
+* A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
+
+This is how ChatGPT visualizes the process: :-D
+
+<img width="350" alt="poll" src="cloud_components_chatgpt.png">
 
 ### How we resolve data tests with our stakeholders
 
