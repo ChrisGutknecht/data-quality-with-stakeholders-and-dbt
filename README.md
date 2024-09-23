@@ -8,15 +8,8 @@
 ---
 * We want people to stay and spend time on data quality... but HOW?
 
- 
 <img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
 
-```
-remove before publish: Data team level
-* Beginners. "Where do we look for material?"
-* Intermediates. "Something's always on fire! This material is sh...! "
-* Experts. "Everything's under control. We have friends helping us")
-```
 
 * How do people gather round a campfire? Marshmallows!
 
