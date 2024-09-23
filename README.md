@@ -15,8 +15,9 @@
 
 <img width="550" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
-* **Marshmallows** are data events stakeholders care about:
-   * **Anomalies** = things they don't have to monitor
+* **Marshmallows**: 
+  * Data events that stakeholders really care about:
+  * Example. **Anomalies** on leading indicators, which they don't have to monitor
 * BUT we need to mix in **healthy snacks** = boring tests like `unique` and `not_null`
 
 ---
