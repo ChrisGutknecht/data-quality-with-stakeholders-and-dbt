@@ -1,4 +1,4 @@
-## Welcome to my No-Slides session for "Data quality with stakeholders"
+## Welcome to my No-Slides session for "Building data quality with stakeholders"
 
 <img width="250" alt="noslides" src="https://noslides.wtf/_app/immutable/assets/hero-desktop.DMAxQ2GM.webp">
 
