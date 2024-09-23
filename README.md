@@ -11,7 +11,7 @@
 <img width="550" alt="campfire" src="https://magazine.outdoornebraska.gov/wp-content/uploads/2023/07/EF20090804_049-cmyk-copy.jpg">
 
 
-* How do people gather round a campfire? Marshmallows!
+* How do people gather round a campfire? **Marshmallows**!
 
 <img width="550" alt="campfire-with-marshmallows" src="https://img.freepik.com/premium-photo/cozy-mug-with-marshmallows-by-campfire-with-friends_464863-3401.jpg">
 
