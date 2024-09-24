@@ -47,17 +47,12 @@ Code: 4553 5553
 | 4   | dbt generic tests | not_null, unique        | None                     |
 
 ---
-```
-Live alerts demo links:
-- logs sink. https://console.cloud.google.com/logs/router/sink/projects%2Fbergzeit%2Fsinks%2Fdbt_test_results_update?project=bergzeit
-- Brand name changes: https://teams.microsoft.com/l/message/19:1e2264e4c6744f54afdde51365aea367@thread.tacv2/1718783109390?tenantId=56c3a46a-d8d8-4536-b7df-55171d42be45&groupId=1f3a7ce9-a98e-44a5-92b4-92411119424c&parentMessageId=1718783109390&teamName=Data%20%26%20Analytics&channelName=Alerts_dbt_channelpilot&createdTime=1718783109390&ngc=true
-```
 
----
 
-### Our daily data quality alert pipeline 
-* **dbt cloud** to manage models and run tests
-* Store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
+### Our daily data quality alert pipeline @ Bergzeit :mountain_snow:
+
+* We use **dbt cloud** to manage models and run tests
+* We store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
 * Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
 * A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
 
