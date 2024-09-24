@@ -11,7 +11,7 @@ jobid_webhook_lookup = {
     },
     '124': { 
         'job_name': 'test_models_channel_2',
-        'webhook': 'https://youe.webhook.office.com/webhookb2/...'   }   
+        'webhook': 'https://youe.webhook.office.com/webhookb2/...'
     }
 }
 
