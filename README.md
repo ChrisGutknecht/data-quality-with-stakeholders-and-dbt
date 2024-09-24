@@ -47,8 +47,9 @@ Code: 4553 5553
 | 4   | dbt generic tests | not_null, unique        | None                     |
 
 ---
+### Live alerts demo
 
-
+---
 ### Our daily data quality alert pipeline @ Bergzeit :mountain_snow:
 
 * We use **dbt cloud** to manage models and run tests
@@ -60,29 +61,23 @@ This is how ChatGPT visualizes the process: :-D
 
 <img width="350" alt="poll" src="cloud_components_chatgpt.png">
 
+---
+
 ### How we resolve data tests with our stakeholders
 
-
-* Use dbt Explore to demonstrate how to debug data tests
-  - Open the affected model in dbt Explore, click on the failed test.
-  - Copy the compiled test code into BigQuery and run the query:
-
-* Looker Studio Dashboards for Data Visualization
-* Rotate first response duty among data team
-  - Are certain days or values noticeable? If yes, include them in the comment, along with the query.
-  - If the test is only true or false, the model owner should take over.
+* Use dbt Explore to get the compiled code of the failed test and run the query
+* For stakeholders, provide additional Looker Studio Dashboards for Data Visualization
+* Rotate first response duty for test failure among data team
  
-* Is this the first time the fail occurred? Is there reason to believe it won't occur again and is an exception? > Wait to see if the fail occurs again.
-* Is the threshold too strict? Is increasing it justifiable? > Increase the threshold.
-* Unique? Would a deduplication using a qualify row_number() statement make sense? > Deduplicate.
-* Is the alert even meaningful? Is there an adequate response, or is there nothing to be done? > Remove the alert and report the issue to the business owner.
+  * First time the failure? Threshold too strict? Deduplication via a qualify row_number()?
+  * improve signal-to-noise ratio: Is the alert meaningful? Is there an adequate business response, or nothing to be done?
+  * keep improving  model description to 1) provide sufficient context, 2) describe worst case Scenarios und 3) specific resolution steps
 
 ---
 
 ### Best practices for improving data tests
 
-
-* Route different tests into differente channels (Teams, Slack) using
+* Route different tests into differente channels (Teams, Slack) using tags, either on model and test level
 
 ```
   - dbt_expectations.expect_table_row_count_to_be_between:
@@ -95,7 +90,7 @@ This is how ChatGPT visualizes the process: :-D
         tags: ["analytics-alerts"]
 ```
 
-* use owner tags on all models
+* use **owner** tags on all models
 
 ```
   - name: stg_gsc_inspection_logs
@@ -105,7 +100,7 @@ This is how ChatGPT visualizes the process: :-D
     meta:
       owner: "@Chris G"
 ```
-* use group tags for all folders as fallback for model ownership
+* use group tags for all folders as **fallback** for model ownership
 
 ```
 census_syncs:
@@ -114,12 +109,6 @@ census_syncs:
 channel_attribution:
   +group: customer_acquisition
 ```
-
-* constantly update model description to 1) provide more context, 2) describe worst case Scenarios of test failures und 3) specific resolution tests
-
-* improve signal-to-noise ratio 
-
-
 * How can I optimize the UX test alerts resolution?
 
 # Resources: 
