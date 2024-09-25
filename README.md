@@ -51,11 +51,11 @@ Code: 4553 5553
 See recording: https://www.linkedin.com/events/buildingdataqualitywithyourstak7243873241482579968/comments/
 
 ---
-### Our daily data quality alert pipeline @ Bergzeit :mountain_snow:
+### Our daily data quality alert forwarding pipeline @ Bergzeit :mountain_snow:
 
 * We use **dbt cloud** to manage models and run tests
 * We store the test failures with an `on-run-end` macro `store_test_results` in BigQuery
-* Listen on table updates with **Logs explorer** sink and PubSub and trigger a cloud function
+* A PubSub topic Listens on table updates with from **Logs explorer** sink and and trigger a cloud function
 * A `post_dbt_test_result` cloud function queries the `test_results` dbt model, converts the dataframe to HTML and sends it to MS teams
 
 This is how ChatGPT visualizes the process: :-D
