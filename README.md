@@ -47,7 +47,8 @@ Code: 4553 5553
 | 4   | dbt generic tests | not_null, unique        | None                     |
 
 ---
-### Live alerts demo
+### Live alerts demo: 
+See recording: https://www.linkedin.com/events/buildingdataqualitywithyourstak7243873241482579968/comments/
 
 ---
 ### Our daily data quality alert pipeline @ Bergzeit :mountain_snow:
