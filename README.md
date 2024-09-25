@@ -68,15 +68,15 @@ This is how ChatGPT visualizes the process: :-D
 
 * Use dbt Explore to get the compiled code of the failed test and run the query
 * For stakeholders, provide additional Looker Studio Dashboards for Data Visualization
-* Rotate first response duty for test failure among data team
+* Rotate daily first response duty for test failure among data team
  
-  * First time the failure? Threshold too strict? Deduplication via a qualify row_number()?
-  * improve signal-to-noise ratio: Is the alert meaningful? Is there an adequate business response, or nothing to be done?
-  * keep improving  model description to 1) provide sufficient context, 2) describe worst case Scenarios und 3) specific resolution steps
+  * First time failure? Threshold too strict? Deduplication via a window function?
+  * Is the alert meaningful? Is there an adequate business response, or nothing to be done?
+* Keep improving  model description to 1) provide sufficient context, 2) describe worst case Scenarios und 3) specific resolution steps
 
 ---
 
-### Best practices for improving data tests
+### Best practices for improving data test resolution and collaboration
 
 * Route different tests into differente channels (Teams, Slack) using tags, either on model and test level
 
@@ -110,7 +110,6 @@ census_syncs:
 channel_attribution:
   +group: customer_acquisition
 ```
-* How can I optimize the UX test alerts resolution?
 
 # Resources: 
 - dbt expectations: https://github.com/calogica/dbt-expectations
