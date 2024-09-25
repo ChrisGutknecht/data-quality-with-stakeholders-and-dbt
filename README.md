@@ -33,10 +33,10 @@ Code: 4553 5553
 
 ---
 
-## 3. DEMO. Let's dive into some real examples!
+## 3. DEMO. Let's dive into some examples!
 
 
-### Types of heavily used data tests
+### Types of heavily used data tests @ Bergzeit :mountain_snow:
 
 
 | #   | Test type         | Example use cases       | Stakeholder interaction  |
