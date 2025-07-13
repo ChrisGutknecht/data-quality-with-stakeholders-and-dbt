@@ -87,7 +87,6 @@ This is how ChatGPT visualizes the process: :-D
       row_condition: "date = current_date()" # (Optional)
       strictly: false
       config:
-        severity: warn
         tags: ["analytics-alerts"]
 ```
 
