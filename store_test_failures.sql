@@ -69,7 +69,7 @@
       '{{ env_var("DBT_CLOUD_PROJECT_ID", "manual") }}' as audit_project_id,
       '{{ env_var("DBT_CLOUD_JOB_ID", "manual") }}' as audit_job_id,
       '{{ env_var("DBT_CLOUD_RUN_ID", "manual") }}' as audit_run_id,
-      '{{ env_var("DBT_CLOUD_URL", "https://cloud.getdbt.com/next/deploy/your_project_id/projects/") }}'||'{{ env_var("DBT_CLOUD_PROJECT_ID", "manual") }}'||'/runs/'||'{{ env_var("DBT_CLOUD_RUN_ID", "manual") }}' as audit_run_url   
+      '{{ env_var("DBT_CLOUD_URL", "https://cloud.getdbt.com/deploy/your_project_id/projects/") }}'||'{{ env_var("DBT_CLOUD_PROJECT_ID", "manual") }}'||'/runs/'||'{{ env_var("DBT_CLOUD_RUN_ID", "manual") }}' as audit_run_url   
     {{ "union all" if not loop.last }}
   
   {%- endfor %}
